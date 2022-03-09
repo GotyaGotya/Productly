@@ -169,4 +169,25 @@ body {
   }
 }
 
+.manager {
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__inner {
+    max-width: 486px;
+  }
+  &__list-li {
+    padding: 30px 0 0 65px;
+    position: relative;
+    &::before {
+      content: url("../images/manager/manager-icon.svg");
+      position: absolute;
+      top: 40px;
+      left: 0;
+    }
+  }
+}
+
 @import "media";
