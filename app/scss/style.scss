@@ -1,6 +1,7 @@
 @import "vars";
 @import "fonts";
 @import "reset";
+@import "libs";
 @import "global";
 
 body {
@@ -95,6 +96,7 @@ body {
     color: #ff9900;
     font-weight: 600;
     position: relative;
+    text-decoration: underline;
     &::before {
       content: url("../images/arrow-top.svg");
       position: absolute;
@@ -223,6 +225,7 @@ body {
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
+  padding-bottom: 30px;
   &__inner {
     padding: 230px 0 380px 0;
     position: relative;
@@ -327,6 +330,74 @@ body {
     padding: 15px 41px 14px;
     border: none;
     cursor: pointer;
+  }
+}
+
+.blog {
+  margin-bottom: 120px;
+  &__title {
+    font-size: 34px;
+    line-height: 51px;
+  }
+  &__text {
+    padding-bottom: 55px;
+  }
+  &__slider {
+    position: relative;
+  }
+  &__slider-item {
+    max-width: 348px;
+    min-height: 359px;
+    border-radius: 8px;
+  }
+  &__slider-img {
+    margin-bottom: 25px;
+  }
+  &__slider-wrapper {
+    margin-bottom: 12px;
+  }
+  &__slider-author {
+    color: #544837;
+    span {
+      font-weight: 700;
+    }
+    ::after {
+      content: "|";
+      padding-left: 5px;
+      font-weight: normal;
+    }
+  }
+  &__slider-data {
+    color: #544837;
+  }
+  &__slider-title {
+    font-size: 24px;
+    line-height: 34px;
+    &:hover {
+      color: #ff9900;
+      transition: 0.3s;
+    }
+  }
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+}
+.slick-dots li.slick-active button {
+  background-color: #ff9900;
+}
+.slick-dots li button {
+  font-size: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: none;
+}
+.slick-dots li {
+  margin-left: 10px;
+  &:first-child {
+    margin-left: 0;
   }
 }
 
