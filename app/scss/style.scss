@@ -173,6 +173,7 @@ body {
 }
 
 .manager {
+  padding-bottom: 104px;
   &__box {
     display: flex;
     justify-content: space-between;
@@ -190,6 +191,29 @@ body {
       top: 40px;
       left: 0;
     }
+  }
+}
+
+.marketers {
+  padding-bottom: 100px;
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__text-title{
+    padding-bottom: 30px;
+  }
+  &__list-li + &__list-li {
+    padding-top: 25px;
+  }
+  &__title {
+    padding-bottom: 22px;
+  }
+  &__title-tiny {
+    font-size: 16px;
+    line-height: 26px;
+    padding-bottom: 12px;
   }
 }
 
