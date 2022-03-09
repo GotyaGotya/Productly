@@ -156,6 +156,9 @@ body {
     align-items: center;
     justify-content: space-between;
   }
+  &__text-title{
+    padding-bottom: 30px;
+  }
   &__list-li + &__list-li {
     padding-top: 25px;
   }
