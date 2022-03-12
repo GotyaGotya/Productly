@@ -8,4 +8,11 @@ $(function () {
     arrows: false,
   });
 
+  $(document).ready(function () {
+    $('.menu__burger').click(function () {
+      $('.menu__list').toggleClass('menu__list--active'),
+        $('.menu__burger').toggleClass('menu__burger--active');
+    });
+  });
+
 });

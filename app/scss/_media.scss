@@ -1,0 +1,362 @@
+@media (max-width: 900px) {
+  body {
+    font-size: 14px;
+  }
+  .menu {
+    &__burger {
+      z-index: 12;
+      display: block;
+      position: relative;
+      width: 30px;
+      height: 20px;
+      span {
+        position: absolute;
+        background-color: #000;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 10px;
+      }
+      &::before,
+      &::after {
+        content: "";
+        background-color: #000;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+      }
+      &::before {
+        top: 0;
+      }
+      &::after {
+        bottom: 0;
+      }
+      &--active {
+        span {
+          background-color: #fff;
+        }
+        &::after {
+          background-color: #fff;
+        }
+        &::before {
+          background-color: #fff;
+        }
+      }
+    }
+    &__list {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      padding-top: 50px !important;
+      transform: translateY(-200%);
+      transition: all 0.4s;
+      z-index: 11;
+      background: rgba(42, 42, 42, 0.9);
+      box-shadow: #ccc;
+      box-shadow: 0 4px 2px -2px rgba(36, 36, 36, 0.17);
+      li {
+        line-height: 60px;
+        a {
+          opacity: 1;
+          color: #fff;
+        }
+      }
+    }
+    &__list--active {
+      transform: translateY(0);
+      transition: all 0.4s;
+    }
+    &__list-item + &__list-item {
+      margin-left: 0;
+    }
+  }
+  .top {
+    &__wrapper {
+      flex-direction: column;
+    }
+    &__img {
+      display: none;
+    }
+    &__title {
+      max-width: 518px;
+    }
+    &__text {
+      max-width: 460px;
+    }
+  }
+  .about {
+    margin-bottom: 50px;
+    &__list-title {
+      font-size: 18px;
+    }
+    &__list {
+      max-width: none;
+      width: 160px;
+    }
+    &__list + &__list {
+      margin-left: 10px;
+    }
+  }
+  .professionals {
+    &__list-li + &__list-li {
+      padding-top: 15px;
+    }
+    &__img {
+      margin-left: 10px;
+      max-width: 50%;
+    }
+  }
+  .manager {
+    &__img {
+      margin-right: 10px;
+      max-width: 50%;
+    }
+  }
+  .marketers {
+    padding-bottom: 50px;
+    &__img {
+      margin-left: 10px;
+      max-width: 50%;
+    }
+  }
+  .team {
+    margin-bottom: 50px;
+    &__inner {
+      padding: 220px 0 300px 0;
+    }
+    &__item {
+      width: 70px;
+      &--1 {
+        top: 100px;
+        right: 40px;
+      }
+      &--2 {
+        top: 190px;
+        left: 10px;
+      }
+      &--3 {
+        bottom: 100px;
+        right: 15px;
+      }
+      &--4 {
+        bottom: 10px;
+        left: 270px;
+      }
+      &--5 {
+        display: none;
+      }
+    }
+    &__item-img {
+      width: 70px;
+      height: 70px;
+    }
+    &__item-text--right {
+      top: -40px;
+      right: 50px;
+    }
+    &__item-text--left {
+      left: 44px;
+    }
+  }
+  .blog {
+    margin-bottom: 50px;
+    &__slider-item {
+      max-width: 210px;
+      min-height: 260px;
+    }
+    &__slider-author,
+    &__slider-data {
+      font-size: 12px;
+    }
+    &__slider-title {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+  .footer {
+    padding: 100px 0 60px 0;
+    &__nav {
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+    &__list {
+      padding: 0 15px 0 15px;
+    }
+    &__form {
+      margin-top: 30px;
+      align-items: center;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  body {
+    font-size: 12px;
+  }
+  .menu {
+    margin: 0 auto;
+  }
+  .user-nav {
+    margin: 0;
+  }
+  .top {
+    &__title {
+      font-size: 20px;
+      min-width: 0;
+      margin-bottom: 0;
+    }
+    &__text {
+      font-size: 14px;
+      min-width: 0;
+    }
+  }
+  .about {
+    &__warranty {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+    &__list {
+      margin: 0 0 20px 10px;
+    }
+    &__list + &__list {
+      margin-left: 0;
+    }
+  }
+  .professionals {
+    &__title {
+      font-size: 18px;
+      line-height: 24px;
+      padding-bottom: 10px;
+    }
+  }
+  .manager {
+    &__title {
+      font-size: 18px;
+    }
+  }
+  .blog {
+    &__title {
+      font-size: 24px;
+    }
+    &__text {
+      padding-bottom: 20px;
+    }
+    &__slider-item {
+      max-width: 150px;
+      min-height: 200px;
+    }
+    &__slider-img {
+      margin-bottom: 10px;
+    }
+    &__slider-author,
+    &__slider-data {
+      font-size: 10px;
+    }
+    &__slider-title {
+      font-size: 12px;
+    }
+  }
+  .footer {
+    padding: 60px 0 60px 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    padding-top: 15px;
+    &__inner {
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+    }
+  }
+  .user-nav {
+    margin-top: 30px;
+  }
+  .top {
+    &__wrapper {
+      padding: 60px 0 30px 0;
+    }
+    &__title {
+      line-height: 26px;
+      margin-bottom: 30px;
+    }
+    &__text {
+      line-height: 20px;
+    }
+    &__btn {
+      margin-right: 6px;
+    }
+  }
+  .about {
+    &__title {
+      line-height: 28px;
+    }
+    &__warranty {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+    }
+  }
+  .professionals {
+    &__img {
+      display: none;
+    }
+  }
+  .manager {
+    &__img {
+      display: none;
+    }
+  }
+  .marketers {
+    &__img {
+      display: none;
+    }
+  }
+  .team {
+    &__inner {
+      padding: 100px 0 100px 0;
+    }
+    &__item {
+      display: none;
+    }
+  }
+  .blog {
+    &__slider-item {
+      max-width: 100px;
+    }
+    &__slider-author {
+      padding-right: 10px;
+      ::after {
+        content: none;
+      }
+    }
+    &__slider-author,
+    &__slider-data {
+      font-size: 12px;
+    }
+    &__slider-title {
+      font-size: 14px;
+    }
+  }
+  .footer {
+    &__nav {
+      flex-direction: column;
+    }
+    &__logo {
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    &__list + &__list {
+      margin-top: 20px;
+    }
+    &__form-input {
+      width: 300px;
+    }
+  }
+}
